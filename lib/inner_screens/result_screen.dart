@@ -8,6 +8,7 @@ import 'package:library_app/components/constant.dart';
 import 'package:library_app/components/custom_drop_down.dart';
 import 'package:library_app/components/drop_down/drop_down_button_list_item.dart';
 import 'package:library_app/components/global_componnets.dart';
+import 'package:library_app/components/my_app_banner.dart';
 import 'package:library_app/components/my_drawer.dart';
 import 'package:library_app/dummy_data/pdf_files_datd.dart';
 import 'package:library_app/items/pdf_item.dart';
@@ -273,28 +274,39 @@ class _ResultScreenState extends State<ResultScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30)
-                          .add(EdgeInsets.only(top: 15)),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Container(
-                          alignment: Alignment.center,
-                          width: double.infinity,
-                          height: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: primaryColor),
-                            color: Colors.white,
-                          ),
-                          child: myText(
-                            "اضغط هنا لمشاهدة شرح تحميل الملفات",
-                            14,
-                            FontWeight.w600,
-                          ),
-                        ),
+
+//                    Padding(
+//                      padding: EdgeInsets.symmetric(horizontal: 30)
+//                          .add(EdgeInsets.only(top: 15)),
+//                      child: InkWell(
+//                        onTap: () {},
+//                        child: Container(
+//                          alignment: Alignment.center,
+//                          width: double.infinity,
+//                          height: 70,
+//                          decoration: BoxDecoration(
+//                            borderRadius: BorderRadius.circular(8),
+//                            border: Border.all(color: primaryColor),
+//                            color: Colors.white,
+//                          ),
+//                          child: myText(
+//                            "اضغط هنا لمشاهدة شرح تحميل الملفات",
+//                            14,
+//                            FontWeight.w400,
+//                          ),
+//                        ),
+//                      ),
+//                    ),
+
+                    MyAppBanner(
+                        "https://www.facebook.com/amjad.abed.948",
+                      myText(
+                        "اضغط هنا لمشاهدة شرح تحميل الملفات",
+                        14,
+                        FontWeight.w400,
                       ),
                     ),
+
                     Expanded(
                       child: Padding(
                         padding:  EdgeInsets.only(bottom: 20),

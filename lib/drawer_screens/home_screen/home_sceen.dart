@@ -6,6 +6,7 @@ import 'package:library_app/ads/banner_ad_model.dart';
 import 'package:library_app/components/constant.dart';
 import 'package:library_app/components/custom_drop_down.dart';
 import 'package:library_app/components/global_componnets.dart';
+import 'package:library_app/components/my_app_banner.dart';
 import 'package:library_app/components/my_drawer.dart';
 import 'package:library_app/drawer_screens/home_screen/cubit/home_cubit.dart';
 import 'package:library_app/dummy_data/home_screen_data.dart';
@@ -128,6 +129,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               mainAxisSize: MainAxisSize.max,
                               children: [
+
+                                MyAppBanner(
+                                  "https://www.facebook.com/amjad.abed.948",
+                                  myText(
+                                    "اضغط هنا لمشاهدة شرح تحميل الملفات",
+                                    14,
+                                    FontWeight.w400,
+                                  ),
+                                ),
+
                                 Expanded(
                                   child: Scrollbar(
                                     thickness: 5,
@@ -138,9 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       child: ListView.builder(
                                           itemCount: cubit.homeModel.titles.length,
                                           itemBuilder: (context, index) {
-                                            return
-
-                                                  HomeScreenItem(cubit.homeModel.titles[index],cubit.sectionModel,cubit.subsectionModel);
+                                            return HomeScreenItem(cubit.homeModel.titles[index],cubit.sectionModel,cubit.subsectionModel);
 
 
                                           }

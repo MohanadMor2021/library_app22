@@ -115,7 +115,8 @@ class _MyDrawerState extends State<MyDrawer> {
                      itemCount: cubit.drawerModel.data.length ,
                      // ignore: missing_return
                      itemBuilder: (context, index){
-                       return  myListTiel(cubit.drawerModel.data[index].name,'${cubit.drawerModel.data[index].icon}', () async {
+                       return  myListTiel(cubit.drawerModel.data[index].name,'${cubit.drawerModel.data[index].icon}',
+                             () async {
                          final url = cubit.drawerModel.data[index].link;
                          if (await canLaunch(url)) {
                            await launch(url);

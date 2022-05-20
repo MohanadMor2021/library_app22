@@ -339,7 +339,7 @@ Column(
           fontSize: fontSize.sp,
           color: Colors.black,
           fontWeight: fontWeight,
-          fontFamily: 'cairo'
+          fontFamily: "cairo",
         ),
         textAlign:  TextAlign.center,
       );

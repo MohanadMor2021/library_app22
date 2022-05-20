@@ -42,6 +42,11 @@ class _my_dropdownState extends State<my_dropdown> {
         child: IgnorePointer(
           ignoring: false,
           child: DropdownButton(
+            underline: Container(
+              height: 2,
+              color: Colors.transparent,
+            ),
+
              hint: Text('اختر المرحلة')
             ,
             isExpanded: true,
