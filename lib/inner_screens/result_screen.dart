@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/size_extension.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -321,7 +322,10 @@ class _ResultScreenState extends State<ResultScreen> {
                                 ) ;
                               }else {
                                 return
-                                    PdfItem(cubit.resultModel.files[index]);
+                                  DelayedDisplay(
+                                      delay: const Duration( milliseconds: 300),
+                                      child: PdfItem(
+                                          cubit.resultModel.files[index]));
                               }
                             }
 
